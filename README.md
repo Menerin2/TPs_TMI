@@ -1,6 +1,6 @@
-# Traitement et Modelisation de l'Image
+# Image processing and modeling
 
-This repository contains all the TP I did during the course "Traitement et Modelisation de l'Image"
+This repository contains all the TP I did during the course "Traitement et Modelisation de l'Image" (image processing and modeling)
 
 ## Organisation
 
@@ -33,3 +33,19 @@ Then, we proceed to contour detection with the Freeman code algorithm, the Boyer
 In this TP, we focus on analyzing the differents attributes of regions in an image. We mainly used the Median axis, the Crofton perimeter and geometric moments.
 
 ## Segmentation
+
+### 1-OpenCV
+
+This TP serve to introduce the basic of image segmentation using OpenCV.
+
+### 2-Histogram
+
+In this TP, we focus on image segmentation using histogram-based methods. We mainly use the Otsu method for automatic thresholding and segmentation by classification with k-means.
+
+### 3-Region
+
+This TP focuses on implementing a region growth algorithm saw in class.
+
+### 4-Watershed
+
+In this TP, we implement some morphological operations to use the morphological gradient and finaly implement the watershed algorithm for image segmentation.
