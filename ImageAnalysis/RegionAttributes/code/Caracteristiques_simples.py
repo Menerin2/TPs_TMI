@@ -139,12 +139,11 @@ def crofton(mat):
 def main():
     # Nom de l'image
     img_name = sys.argv[1] if len(sys.argv) > 1 else "blob"
-    ex = int(sys.argv[2]) if len(sys.argv) > 2 else 1
-    verbose = "--verbose" in sys.argv
     matrice = initImage(cv.imread(f"imagesTest/{img_name}.pgm", cv.IMREAD_GRAYSCALE))
     LH(matrice)
     centre(matrice)
     elongation(matrice)
+    #crofton(matrice)
 
 if __name__ == "__main__":
     main()

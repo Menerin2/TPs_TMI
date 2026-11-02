@@ -31,23 +31,20 @@ def blurring_demo():
     filtred[MEDIAN_BLUR] = cv.medianBlur(img,size)
 
     # Affichage des images filtrees
-    cpt = 0
-    while(True):
-        plt.plot()
-        plt.imshow(filtred[cpt])
-        if cpt == 0:
-            plt.title('blur')
-        elif cpt == 1:
-            plt.title('Gaussian')
-        elif cpt == 2:
-            plt.title('Median')
-        plt.xticks([]), plt.yticks([])
-
-        # On change d'image si un bouton est presse
-        if(plt.waitforbuttonpress(20)):
-            cpt = cpt+1
-            if cpt > 2:
-                break
+    plt.plot()
+    plt.imshow(filtred[BLUR])
+    plt.title('blur')
+    plt.xticks([]), plt.yticks([])
+    plt.figure()
+    plt.imshow(filtred[GAUSSIAN_BLUR])
+    plt.title('Gaussian')
+    plt.xticks([]), plt.yticks([])
+    plt.figure()
+    plt.imshow(filtred[MEDIAN_BLUR])
+    plt.title('Median')
+    plt.xticks([]), plt.yticks([])
+    plt.show()
+                
 
 """
 Demonstration du filtre bilaterak.
