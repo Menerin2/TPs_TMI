@@ -26,7 +26,7 @@ int main( int argc, char** argv )
     help(argc, argv);
     string imageName("images/daisy.png");                  // Image by default
     if( argc > 1)
-        imageName = argv[1];
+        imageName = "images/"+string(argv[1])+".png";
     
     Mat image;
     image = imread(imageName.c_str(), IMREAD_COLOR); // Read the file

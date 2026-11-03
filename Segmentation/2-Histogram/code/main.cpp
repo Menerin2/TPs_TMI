@@ -20,8 +20,9 @@ int main( int argc, char** argv )
 {
     help(argc, argv);
     string imageName("images/coins.png"); // by default
+    int exercise = 1; // by default
     if( argc > 1)
-        imageName = argv[1];
+        imageName = "images/"+string(argv[1])+".png";
     if( argc > 2)
         exercise = atoi(argv[2]);
     

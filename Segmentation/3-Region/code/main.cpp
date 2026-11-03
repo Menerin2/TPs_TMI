@@ -31,8 +31,9 @@ int main( int argc, char** argv )
 {
     help(argc, argv);
     string imageName("images/rice.png"); // by default
+    int predicat = 1; // by default 
     if( argc > 1)
-        imageName = argv[1];
+        imageName = "images/"+string(argv[1])+".png";
     if( argc > 2)
         predicat = atoi(argv[2]);
     

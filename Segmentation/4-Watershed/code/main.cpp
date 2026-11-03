@@ -11,7 +11,7 @@ vector<Point> germes;
 
 string window_org = "Original image";
 int exercise = 1;
-string typeSE = "croix"; //carree, disque, diamant, croix, hligne, vlinge
+string typeSE = "croix"; //carre, disque, diamant, croix, hline, vline
 int taille = 1;
 
 static void onMouse( int , int , int , int , void* ) ;
@@ -19,15 +19,19 @@ static void onMouse( int , int , int , int , void* ) ;
 static void help(int argc, char** argv)
 {
     cout<<"Usage: "<<argv[0]<<" [input.png] [numExo] [typeSE] [taille]\n";
-    cout<<"typeSE: carree, disque, croix, hligne, vlinge\n";
+    cout<<"typeSE: carre, disque, croix, hline, vline\n";
 }
 
 int main( int argc, char** argv )
 {
     help(argc, argv);
     string imageName("images/tree.png"); // by default
+    int exercice = 1; // by default
+    char* typeSE = "carre"; // by default
+    int taille = 1; // by default
     if( argc > 1)
-        imageName = argv[1];
+        imageName = "images/"+string(argv[1])+".png";
+        cout << "Using image: " << imageName << endl;
     if( argc > 2)
         exercise = atoi(argv[2]);
     if( argc > 4) {
